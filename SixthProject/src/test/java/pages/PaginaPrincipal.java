@@ -9,7 +9,7 @@ public class PaginaPrincipal extends BasePage {
     private String elementSpace1 = "//input[@id='number1Field']";
     private String elementSpace2 = "//input[@id='number2Field']";
     private String Calculate = "//*[@id='calculateButton']";
-    private String Answer = "//input[@id='numberAnswerField']";
+    private String Answer = "//input[@id='clearButton']";
     
  
     public PaginaPrincipal() {
@@ -59,18 +59,22 @@ public class PaginaPrincipal extends BasePage {
         clickElement(Calculate);
     }
 
-    public void limpio_los_campos() {
+    public void limpio_los_campos_1() {
     write(elementSpace1, " ");
-    write(elementSpace2, " ");
-    write(Answer, " ");
 }
 
-   /*public String getTextpp(){
-    return getText(Answer);
-    
-    
-    
-    }*/
+
+    public void limpio_los_campos_2() {
+    write(elementSpace2, " ");
+}
+
+
+    public void limpiar_respuesta(){
+        clickElement(Answer);
+
+    }
+
+
 
 
 }

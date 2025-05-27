@@ -61,23 +61,6 @@ public class SauceDemoSteps {
 
 
 
-   /*@Then("Debería ver 6 como resultado en el campo Answer")
-    public void getTextppp2(){
-        String ans = "6";
-        String ot = landingPage.getTextpp();
-        ot.toString()
-        Assert.assertEquals(ot,ans);
-                
-    }*/
-
-    //limpar campos
-
-    @And("limpio los campos elementSpace1, elementSpace2 y Answer")
-    public void limpiarCampos() {
-    landingPage.limpio_los_campos();
-}
-
-
 
     //concatenar
 
@@ -85,7 +68,20 @@ public class SauceDemoSteps {
     public void selectDropmenu3(){
         landingPage.selectFromDropdownOp4();
     }
+    
+    @And("limpio los campos elementSpace1")
+    public void limpiarCampos1() {
+    landingPage.limpio_los_campos_1();
+}
 
+    @And("limpio los campos elementSpace2")
+    public void limpiarCampo2() {
+    landingPage.limpio_los_campos_2();
+}
 
+    @And("limpio los campos Answer")
+    public void limpiarCampo3() {
+    landingPage.limpiar_respuesta();
+}
 
 }
